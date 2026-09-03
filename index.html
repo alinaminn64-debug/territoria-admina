@@ -1,0 +1,487 @@
+
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Территория Админа</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!-- ЭКРАН ВХОДА -->
+  <!-- ========================= -->
+
+  <div class="login-card" id="loginPage">
+
+    <div class="logo">🦷</div>
+
+    <h1>Территория Админа</h1>
+
+    <p>Добро пожаловать в обучение!</p>
+
+    <label>Логин</label>
+    <input id="login" type="text" placeholder="Введите логин">
+
+    <label>Пароль</label>
+    <input id="password" type="password" placeholder="Введите пароль">
+
+    <button onclick="enterAdmin()">Войти</button>
+
+    <p id="loginError" class="error"></p>
+
+  </div>
+
+
+  <!-- ========================= -->
+  <!-- ГЛАВНАЯ -->
+  <!-- ========================= -->
+
+  <div class="main-page" id="mainPage">
+
+    <header class="header">
+
+      <div>
+        <h1>Добро пожаловать! 👋</h1>
+        <p>Твоя территория уверенности на ресепшене</p>
+      </div>
+
+      <button class="logout-button" onclick="logout()">
+        Выйти
+      </button>
+
+    </header>
+
+
+    <!-- ГЛАВНОЕ МЕНЮ -->
+
+    <div class="menu" id="mainMenu">
+
+      <div class="menu-card">
+
+        <div class="menu-icon">🎓</div>
+
+        <h2>Обучение</h2>
+
+        <p>
+          Изучи стоматологию, услуги клиники
+          и основные обязанности администратора.
+        </p>
+
+        <button onclick="openSection('education')">
+          Начать обучение
+        </button>
+
+      </div>
+
+
+      <div class="menu-card">
+
+        <div class="menu-icon">🔎</div>
+
+        <h2>Шпаргалки</h2>
+
+        <p>
+          Быстро найди нужную информацию
+          во время работы.
+        </p>
+
+        <button onclick="openSection('cheatsheets')">
+          Открыть шпаргалки
+        </button>
+
+      </div>
+
+
+      <div class="menu-card">
+
+        <div class="menu-icon">📝</div>
+
+        <h2>Тест</h2>
+
+        <p>
+          Проверь свои знания и узнай свой результат.
+        </p>
+
+        <button onclick="openSection('test')">
+          Пройти тест
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- ОБУЧЕНИЕ -->
+    <!-- ========================= -->
+
+    <section class="content-section" id="education">
+
+      <button class="back-button" onclick="goHome()">
+        ← Назад
+      </button>
+
+      <h1>🎓 Обучение администратора</h1>
+
+      <p class="section-description">
+        Здесь ты постепенно разберёшься в стоматологии
+        и научишься понимать, что именно предлагает клиника.
+      </p>
+
+
+      <div class="lesson-grid">
+
+
+        <!-- АДМИНИСТРАТОР -->
+
+        <div class="lesson-card">
+
+          <div class="lesson-icon">👩‍💼</div>
+
+          <h2>1. Кто такой администратор?</h2>
+
+          <p>
+            Администратор — это человек, который первым
+            встречает пациента и помогает ему пройти
+            весь путь лечения в клинике.
+          </p>
+
+          <button onclick="showLesson('admin')">
+            Изучить
+          </button>
+
+        </div>
+
+
+        <!-- ОСНОВЫ -->
+
+        <div class="lesson-card">
+
+          <div class="lesson-icon">🦷</div>
+
+          <h2>2. Что такое стоматология?</h2>
+
+          <p>
+            Основные направления стоматологии
+            и чем занимается каждый врач.
+          </p>
+
+          <button onclick="showLesson('dentistry')">
+            Изучить
+          </button>
+
+        </div>
+
+
+        <!-- ТЕРАПИЯ -->
+
+        <div class="lesson-card">
+
+          <div class="lesson-icon">🩺</div>
+
+          <h2>3. Терапия</h2>
+
+          <p>
+            Кариес, пломбы, лечение корневых каналов
+            и эндодонтия.
+          </p>
+
+          <button onclick="showLesson('therapy')">
+            Изучить
+          </button>
+
+        </div>
+
+
+        <!-- ХИРУРГИЯ -->
+
+        <div class="lesson-card">
+
+          <div class="lesson-icon">🦷</div>
+
+          <h2>4. Хирургия</h2>
+
+          <p>
+            Удаление зубов, сложные удаления,
+            хирургические манипуляции.
+          </p>
+<button onclick="showLesson('surgery')">
+            Изучить
+          </button>
+
+        </div>
+
+
+        <!-- ИМПЛАНТАЦИЯ -->
+
+        <div class="lesson-card">
+
+          <div class="lesson-icon">🔩</div>
+
+          <h2>5. Имплантация</h2>
+
+          <p>
+            Имплант, формирователь десны,
+            костная пластика и синус-лифтинг.
+          </p>
+
+          <button onclick="showLesson('implantation')">
+            Изучить
+          </button>
+
+        </div>
+
+
+        <!-- ОРТОПЕДИЯ -->
+
+        <div class="lesson-card">
+
+          <div class="lesson-icon">👑</div>
+
+          <h2>6. Ортопедия</h2>
+
+          <p>
+            Коронки, виниры, вкладки,
+            протезирование и конструкции на имплантах.
+          </p>
+
+          <button onclick="showLesson('orthopedics')">
+            Изучить
+          </button>
+
+        </div>
+
+
+        <!-- ОРТОДОНТИЯ -->
+
+        <div class="lesson-card">
+
+          <div class="lesson-icon">😁</div>
+
+          <h2>7. Ортодонтия</h2>
+
+          <p>
+            Брекеты, исправление прикуса
+            и ортодонтические конструкции.
+          </p>
+
+          <button onclick="showLesson('orthodontics')">
+            Изучить
+          </button>
+
+        </div>
+
+
+        <!-- ДЕТСКАЯ -->
+
+        <div class="lesson-card">
+
+          <div class="lesson-icon">🧸</div>
+
+          <h2>8. Детская стоматология</h2>
+
+          <p>
+            Особенности лечения зубов
+            у детей.
+          </p>
+
+          <button onclick="showLesson('children')">
+            Изучить
+          </button>
+
+        </div>
+
+
+        <!-- ГИГИЕНА -->
+
+        <div class="lesson-card">
+
+          <div class="lesson-icon">✨</div>
+
+          <h2>9. Гигиена</h2>
+
+          <p>
+            Профессиональная чистка,
+            Air Flow, ультразвук и отбеливание.
+          </p>
+
+          <button onclick="showLesson('hygiene')">
+            Изучить
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- УРОК -->
+    <!-- ========================= -->
+
+    <section class="content-section lesson-page" id="lessonPage">
+
+      <button class="back-button" onclick="backToEducation()">
+        ← К обучению
+      </button>
+
+      <div id="lessonContent"></div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- ШПАРГАЛКИ -->
+    <!-- ========================= -->
+
+    <section class="content-section" id="cheatsheets">
+
+      <button class="back-button" onclick="goHome()">
+        ← Назад
+      </button>
+
+      <h1>🔎 Шпаргалки администратора</h1>
+
+      <div class="cheat-grid">
+
+        <div class="cheat-card">
+
+          <h2>👨‍⚕️ Какого врача предложить?</h2>
+
+          <p>
+            Болит зуб → терапевт или хирург
+          </p>
+
+          <p>
+            Нет зуба → хирург + имплантолог + ортопед
+          </p>
+
+          <p>
+            Неровные зубы → ортодонт
+          </p>
+
+          <p>
+            Коронка / винир → ортопед
+          </p>
+
+          <p>
+            Чистка → гигиенист
+          </p>
+
+        </div>
+
+
+        <div class="cheat-card">
+
+          <h2>🔩 Имплантация</h2>
+
+          <p>
+            1. Консультация имплантолога
+          </p>
+
+          <p>
+            2. КТ
+          </p>
+
+          <p>
+            3. План лечения
+          </p>
+
+          <p>
+            4. Установка импланта
+          </p>
+
+          <p>
+            5. При необходимости — костная пластика
+            или синус-лифтинг
+          </p>
+
+          <p>
+            6. Формирователь десны
+          </p>
+
+          <p>
+            7. Коронка
+          </p>
+
+        </div>
+
+
+        <div class="cheat-card">
+
+          <h2>🚨 Пациент с острой болью</h2>
+
+          <p>
+            Не заставляем пациента долго ждать.
+          </p>
+
+          <p>
+            Уточняем симптомы и предлагаем
+            ближайшее доступное время.
+          </p>
+
+          <p>
+            При необходимости — первичный приём
+            с острой болью.
+          </p>
+
+        </div>
+
+
+        <div class="cheat-card">
+
+          <h2>📸 КТ</h2>
+
+          <p>
+КТ помогает врачу оценить состояние
+            зубов, костной ткани и окружающих структур.
+          </p>
+
+          <p>
+            Особенно часто необходимо при
+            имплантации и сложном хирургическом лечении.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- ТЕСТ -->
+    <!-- ========================= -->
+
+    <section class="content-section" id="test">
+
+      <button class="back-button" onclick="goHome()">
+        ← Назад
+      </button>
+
+      <h1>📝 Тест администратора</h1>
+
+      <div id="quiz"></div>
+
+      <button class="test-button" onclick="checkTest()">
+        Проверить ответы
+      </button>
+
+      <div id="testResult"></div>
+
+    </section>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
